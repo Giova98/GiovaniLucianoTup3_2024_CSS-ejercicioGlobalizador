@@ -1,0 +1,236 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;  /* Alinea los elementos verticalmente */
+    min-height: 100vh;       /* Hace que el body ocupe el 100% de la altura de la ventana */
+}
+
+/* menu */
+.header {
+    background-color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas: una para logo-título, otra para navbar */
+    height: 130px;
+    align-items: center;
+    gap: 4px;
+    padding: 0 60px;
+}
+
+.titulo{
+    color: whitesmoke;
+}
+
+.logo-titulo {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Para alinear la imagen y el título en fila */
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar {
+    display: grid;
+    justify-content: end; /* Alinea el navbar a la derecha */
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: grid;
+    grid-auto-flow: column; /* Alinea los elementos en una fila */
+    gap: 15px;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    color: whitesmoke;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover{
+    color: #014edc;
+}
+
+input[type="search"] {
+    margin-right: 10px;
+}
+
+.search-bar {
+    padding: 8px;
+    font-size: 14px;
+    border: 2px solid #000000;
+    border-radius: 20px;
+    width: 200px;
+    transition: width 0.4s ease, transform 0.4s ease;
+    transform-origin: right;
+}
+
+.search-bar:focus {
+    border-color: #ff0000b0;
+    width: 400px;
+    transform: translateX(-50px);
+    outline: none;
+}
+
+/* contenedor */
+
+/* sidebar */
+.container {
+    flex: 1;
+    background-color: whitesmoke;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    grid-template-rows: auto;
+    align-items: start;
+    padding: 10px 10px 10px 10px;
+    gap: 20px;
+}
+
+.sidebar {
+    background-color: lightgray;
+    display: grid; /* Usamos grid dentro del sidebar */
+    grid-template-rows: auto auto auto auto auto auto auto auto; /* Tres filas para los elementos */
+    gap: 10px; /* Reduce el espacio entre los elementos del grid */
+    padding: 10px; /* Ajusta el padding del sidebar */
+    border-radius: 10px;
+    height: 305%; /* Ajusta la altura automáticamente según el contenido */
+}
+
+/* elementos del sidebar */
+.categorias, .ultimosArticulos, .iconos {
+    background-color: lightgray; /* Cambia el color de fondo para distinguir mejor los elementos */
+    display: grid;
+    grid-row: auto;
+    padding: 10px; /* Reduce el padding dentro de cada elemento */
+    border-radius: 10px;
+}
+
+.categorias h2{
+    display: grid;
+   font-weight: solid;
+   color: rgb(0, 0, 0);
+   gap: 80px;
+}
+
+.categorias h4{
+    font-weight: solid;
+    color: rgb(44, 44, 44);
+}
+
+.categorias h4:hover {
+    transform: scale(1.06);
+}
+
+.ultimosArticulos h4{
+    font-weight: solid;
+    color: rgb(44, 44, 44);
+}
+
+.ultimosArticulos h4:hover{
+    transform: scale(1.06);
+}
+
+/* cards */
+
+.cards {
+    display: grid;
+    grid-template-columns: 2 / 4;
+    align-items: center;
+    padding: 20px 20px;
+    gap: 20px;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+.cards .imagen {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.comments {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el botón */
+    align-items: center; /* Centra verticalmente el botón */
+    height: 60px; /* Ajusta el alto según sea necesario */
+}
+
+.comments button {
+    padding: 12px 20px;
+    background-color: #000000;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    font-size: 16px;
+}
+
+.comments button:hover {
+    background-color: #014edc;
+    transform: scale(1.1); /* Escala el botón al 110% cuando el ratón está sobre él */
+}
+
+/* Footer */
+
+.footer {
+    background-color: black;
+    color: white;
+    padding: 40px 20px;
+    height: 150px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente */
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido */
+}
+
+.copyright {
+    text-align: left;
+    display: grid;
+    gap: 10px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-media a img {
+    width: 30px;
+    height: 30px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: lightgray; /* Cambia el color del enlace al hacer hover */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Cambia la dirección a vertical para pantallas pequeñas */
+        text-align: center;
+    }
+
+    .social-media {
+        margin-top: 20px;
+    }
+}

@@ -1,0 +1,40 @@
+Ejercicio Globalizador: Página de Blog Completa
+Objetivo: Crear una página web de blog que incluya una estructura HTML detallada y estilos CSS avanzados. La página debe tener una cabecera, un área de contenido con artículos, una barra lateral, un pie de página, y utilizar elementos de diseño avanzados como flexbox, grid y pseudo-clases.
+
+Requisitos:
+Cabecera (Header):
+
+Un logotipo del blog.
+Un menú de navegación con enlaces a diferentes secciones (Inicio, Blog, Sobre mí, Contacto).
+Un campo de búsqueda.
+Área de Contenido (Main Content):
+
+Tres artículos con título, fecha, imagen destacada y contenido.
+Cada artículo debe estar dentro de una caja con sombra y margen.
+Un sistema de comentarios para cada artículo.
+Barra Lateral (Sidebar):
+
+Una sección con una lista de categorías.
+Una sección con los últimos artículos.
+Un widget de redes sociales.
+Pie de Página (Footer):
+
+Texto de copyright.
+Un enlace a una política de privacidad.
+Un mapa del sitio.
+Estilos Avanzados:
+
+Uso de flexbox y grid para la disposición.
+Aplicar efectos de hover a los enlaces.
+Estilos personalizados para el formulario de búsqueda y el sistema de comentarios.
+Media queries para un diseño responsive.
+Instrucciones:
+Crear el archivo HTML: Copia y pega el código HTML en un archivo llamado index.html.
+Crear el archivo CSS: Copia y pega el código CSS en un archivo llamado styles.css.
+Vincular CSS al HTML: Asegúrate de que la etiqueta <link rel="stylesheet" href="styles.css"> en el <head> de tu archivo HTML esté correcta.
+Entrega:
+El código se deberá adjuntar como un link a un repositorio de Github, el nombre del repositorio deberá tener el siguiente formato:
+
+[nombre alumno]-[comision]-[cohorte]-[año]-BLOG:
+|- index.html
+|- style.css
